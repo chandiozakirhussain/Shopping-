@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | VoltCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+<main class="container">
+  <h1 class="page-title">Checkout</h1>
+  <div class="steps"><span class="step done">✓ 1. Cart</span><span class="step current">2. Checkout</span><span class="step">3. Confirmation</span></div>
+  <div class="layout">
+    <form class="panel" id="checkout-form" novalidate>
+      <h3 style="margin-bottom:16px">Delivery Details</h3>
+      <div class="field"><label for="name">Full Name</label><input class="input" id="name" placeholder="e.g. Ali Khan" autocomplete="name"><div class="err-msg">Please enter your full name (min 3 letters).</div></div>
+      <div class="row2">
+        <div class="field"><label for="phone">Phone Number</label><input class="input" id="phone" placeholder="03XX XXXXXXX" inputmode="tel" autocomplete="tel"><div class="err-msg">Enter a valid mobile number, e.g. 03001234567.</div></div>
+        <div class="field"><label for="email">Email</label><input class="input" id="email" type="email" placeholder="you@email.com" autocomplete="email"><div class="err-msg">Enter a valid email address.</div></div>
+      </div>
+      <div class="field"><label for="city">City</label><input class="input" id="city" placeholder="e.g. Karachi" autocomplete="address-level2"><div class="err-msg">Please enter your city.</div></div>
+      <div class="field"><label for="address">Complete Address</label><input class="input" id="address" placeholder="House no, street, area" autocomplete="street-address"><div class="err-msg">Please enter a complete address.</div></div>
+      <h3 style="margin:22px 0 12px">Payment Method</h3>
+      <div class="pay-options">
+        <label class="pay"><input type="radio" name="pay" value="Cash on Delivery" checked> 💵 Cash on Delivery</label>
+        <label class="pay"><input type="radio" name="pay" value="Easypaisa / JazzCash"> 📱 Easypaisa / JazzCash</label>
+        <label class="pay"><input type="radio" name="pay" value="Debit / Credit Card"> 💳 Debit / Credit Card</label>
+      </div>
+      <button class="btn btn-primary btn-block" style="margin-top:22px" type="submit">✔ Place Order</button>
+      <a href="cart.html" style="display:block;text-align:center;margin-top:12px;color:var(--primary);font-weight:600">← Back to cart</a>
+    </form>
+    <aside class="panel"><h3 style="margin-bottom:10px">Your Order</h3><div id="sum"></div></aside>
+  </div>
+</main>
+<div id="footer"></div>
+<script src="app.js"></script>
+<script>initCheckout();</script>
+</body>
+</html>

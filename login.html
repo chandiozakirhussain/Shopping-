@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login | VoltCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+<main class="container">
+  <div class="auth panel">
+    <div class="tabs"><button class="tab active" data-m="login" type="button">Login</button><button class="tab" data-m="signup" type="button">Sign Up</button></div>
+    <h2 id="auth-title" style="margin-bottom:18px">Welcome back 👋</h2>
+    <form id="auth-form" novalidate>
+      <div class="field" id="name-field" style="display:none"><label for="a-name">Full Name</label><input class="input" id="a-name" placeholder="Your name"></div>
+      <div class="field"><label for="a-email">Email</label><input class="input" id="a-email" type="email" placeholder="you@email.com" autocomplete="email"><div class="err-msg">Enter a valid email address.</div></div>
+      <div class="field"><label for="a-pass">Password</label><input class="input" id="a-pass" type="password" placeholder="At least 6 characters" autocomplete="current-password"><div class="err-msg">Password must be at least 6 characters.</div></div>
+      <button class="btn btn-primary btn-block" id="auth-btn" type="submit">Login</button>
+    </form>
+    <p style="text-align:center;margin-top:16px;color:var(--muted);font-size:.9rem">Or <a href="products.html" style="color:var(--primary);font-weight:600">continue as guest</a></p>
+  </div>
+</main>
+<div id="footer"></div>
+<script src="app.js"></script>
+<script>initLogin();</script>
+</body>
+</html>

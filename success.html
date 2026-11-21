@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmed | VoltCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header"></div>
+<main class="container">
+  <div class="steps" style="justify-content:center;margin-top:28px"><span class="step done">✓ 1. Cart</span><span class="step done">✓ 2. Checkout</span><span class="step current">3. Confirmation</span></div>
+  <div class="success-box">
+    <div class="check">✓</div>
+    <h1>Order Placed Successfully!</h1>
+    <div id="order-info"></div>
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap">
+      <a class="btn btn-primary" href="products.html">Continue Shopping</a>
+      <a class="btn btn-outline" href="index.html">Go to Home</a>
+    </div>
+  </div>
+</main>
+<div id="footer"></div>
+<script src="app.js"></script>
+<script>initSuccess();</script>
+</body>
+</html>
